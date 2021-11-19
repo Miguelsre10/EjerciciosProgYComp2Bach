@@ -6,7 +6,8 @@ public class Ejercicio01_MediaCantidadNumerosIntroducidosUsuario {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int numeros, num, suma= 0, media;
+		int numeros, num, suma= 0;
+		float media;
 		
 		System.out.println("¿Cuantos numeros desa introducir?");
 		numeros = sc.nextInt();
@@ -16,7 +17,7 @@ public class Ejercicio01_MediaCantidadNumerosIntroducidosUsuario {
 			suma = suma + num ;
 			
 		}
-		media = suma/numeros;
+		media = (float)suma/numeros;
 		System.out.println("La media de los numeros introducidos es: "+ media);
 	}
 

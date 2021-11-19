@@ -12,17 +12,34 @@ public class Ejercicio02_NumeroMayorYMenorDeLosIntroducidos {
 		System.out.println("¿Cuantos numeros desea introducir?");
 		numeros = sc.nextInt();
 		
-		for (int i = 0; i < numeros; i++) {
-			System.out.println("intoduzca un numero");
-			num = sc.nextInt();
-			if (num> mayor){
+//		if (numeros == 0 ) {
+//			System.out.println("No puedes comparar algo si no tienes nada");
+//		}
+//		else {
+//			System.out.println("Introduzca un numero de referencia");
+//			num = sc.nextInt();
+//			num = mayor = menor;
+//			
+			for (int i = 0; i < numeros; i++) {
+				
+				System.out.println("intoduzca un numero");
+				num = sc.nextInt();
+				
+			if(i == 0) {
 				mayor = num;
+				menor = mayor;
 			}
-			if (num<menor)
+			else {
+				if (num> mayor){
+				mayor = num;
+				}
+				if (num<menor)
 				menor = num ;
-		}
-		System.out.println("El numero mayor de los introducidos es: "+ mayor);
-		System.out.println("El numero menor de los introducidos es: "+ menor);
+				}
+			}
+			System.out.println("El numero mayor de los introducidos es: "+ mayor);
+			System.out.println("El numero menor de los introducidos es: "+ menor);
+//		}
 	}
 
 }
