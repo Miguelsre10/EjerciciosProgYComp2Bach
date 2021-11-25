@@ -11,15 +11,7 @@ public class Ejercicio02_NumeroMayorYMenorDeLosIntroducidos {
 		
 		System.out.println("¿Cuantos numeros desea introducir?");
 		numeros = sc.nextInt();
-		
-//		if (numeros == 0 ) {
-//			System.out.println("No puedes comparar algo si no tienes nada");
-//		}
-//		else {
-//			System.out.println("Introduzca un numero de referencia");
-//			num = sc.nextInt();
-//			num = mayor = menor;
-//			
+
 			for (int i = 0; i < numeros; i++) {
 				
 				System.out.println("intoduzca un numero");
