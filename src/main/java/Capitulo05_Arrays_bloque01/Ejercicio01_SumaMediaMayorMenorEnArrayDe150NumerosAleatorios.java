@@ -4,7 +4,8 @@ public class Ejercicio01_SumaMediaMayorMenorEnArrayDe150NumerosAleatorios {
 
 	public static void main(String[] args) {
 		int array[] = new int[150];
-		int suma = 0,media = 0,mayor = 0,menor = 0;
+		int suma = 0, mayor = 0,menor = 0;
+		float media = 0;
 	
 		for (int i = 0; i < array.length; i++) {
 			array[i] = (int) Math.round(Math.random() * 100);
@@ -12,14 +13,13 @@ public class Ejercicio01_SumaMediaMayorMenorEnArrayDe150NumerosAleatorios {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
 		}
+		//suma
 		for (int i = 0; i < array.length; i++) {
 			suma = suma + array[i];
 		}
-		for (int i = 0; i < array.length; i++) {
-			suma = suma + array[i];
-		}
-		media = (suma / array.length );
-		
+		//media
+		media = ((float)suma / array.length );
+		//mayor y menor
 		for (int i = 0; i < array.length; i++) {
 			if (i == 0) {
 				mayor = array[i];
