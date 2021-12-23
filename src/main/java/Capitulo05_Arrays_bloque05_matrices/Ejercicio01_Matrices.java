@@ -1,26 +1,36 @@
 package Capitulo05_Arrays_bloque05_matrices;
 
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class Ejercicio01_Matrices {
 
 	public static void main(String[] args) {
+		int k = 0;
+		int array[] = new int[] {} ;
 		int matriz[][] = new int[][] {  { 3, 5, 6, 8, 9 },
 										{10, 12, 16, 18, 19}, 
 										{21, 22, 25, 26, 28}, 
 										{30, 31, 35, 38, 39}, 
 										{42, 43, 44, 45, 47} };
-		int array[] = new int [ ((matriz.length)-1 ) *   (matriz.length)-1 ];
-		
+										
+										
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz[i].length; j++) {
-				array[0]=matriz[i][j];
+				k++;
 			}
 		}
+		
+		
 		mostrarMatriz(matriz);
-		//System.out.println(esMatrizPositiva(matriz));
-		//System.out.println(esMatrizDiagonal(matriz));
+		System.out.println(esMatrizPositiva(matriz));
+		System.out.println(esMatrizDiagonal(matriz));
 		System.out.println( "La matriz es triangular superior: " + esMatrizTriangularSuperior(matriz));
+		//convertirMatrizEnArray(matriz, array, k);
+		System.out.println("La matriz es simetrica: " + esMatrizSimetrica(matriz));
+		matrizOpuesta(matriz);
+		eliminarNumeroMatriz(k, k, matriz);
+		
 		
 	}
 	
@@ -92,12 +102,73 @@ public class Ejercicio01_Matrices {
 		return false;
 	}
 	
-	public static void convertirMatrizEnArray () {
+	/**
+	 * 
+	 * @param matriz
+	 * @param array
+	 * @param k
+	 */
+	
+	public static void convertirMatrizEnArray (int matriz[][], int array[], int k) {
+		k = 0;
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				array[k]= matriz[i][j];
+				System.out.print(array[k]);
+				k++;
+			}
+		}
+		System.out.println();
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	
+	public static boolean esMatrizSimetrica (int matriz[][]) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				if (matriz[i][j] != matriz [j][i]) {
+					return false;
+				}
+			}
+		}
+		 return true;
 		
-		
+	}
+	
+	/**
+	 * 
+	 * @param matriz
+	 */
+	
+	public static void matrizOpuesta (int matriz[][]) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				matriz[i][j]= -(matriz[i][j]);
+				System.out.print(matriz[i][j] + " ");
+			}
+			System.out.println();
+		}
 	}
 	
 	
 	
-	
+	public static void eliminarNumeroMatriz (int fila, int colum, int matriz[][]) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Elija la fila de la que desea eliminar un numero:");
+		fila = sc.nextInt() - 1;
+		System.out.println("Elija la columna de la que desea eliminar un numero:");
+		colum = sc.nextInt() - 1;
+		matriz[fila][colum] = 0;
+		
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				System.out.print(matriz[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+
 }
