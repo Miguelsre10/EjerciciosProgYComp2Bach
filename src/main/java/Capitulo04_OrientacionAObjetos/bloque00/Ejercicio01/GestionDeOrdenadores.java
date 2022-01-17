@@ -2,7 +2,7 @@ package Capitulo04_OrientacionAObjetos.bloque00.Ejercicio01;
 
 import javax.swing.ImageIcon;
 
-public class Gestionrdenadores {
+public class GestionDeOrdenadores {
 
 	public static void main(String[] args) {
 		Ordenador prueba1 = new Ordenador(35, 4, "blanco", true, "HP");
