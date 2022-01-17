@@ -7,11 +7,15 @@ public class Ordenador {
 	boolean esPortatil;
 	String marca;
 	
-	
-	
-	
-	public Ordenador() {
+
+	public Ordenador(int newAlturaCm, int newAnchuraCm, String newColor, boolean newEsPortatil, String newMarca) {
+		alturaCm = newAlturaCm;
+		anchuraCm = newAnchuraCm;
+		color = newColor;
+		esPortatil = newEsPortatil;
+		marca = newMarca;
 		System.out.println("Se acaba de construir un objeto");
+		
 	}
 
 	public void imprimePropiedades() {
