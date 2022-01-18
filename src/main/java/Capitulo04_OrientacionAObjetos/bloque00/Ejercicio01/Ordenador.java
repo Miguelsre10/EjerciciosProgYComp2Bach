@@ -1,11 +1,15 @@
 package Capitulo04_OrientacionAObjetos.bloque00.Ejercicio01;
 
 public class Ordenador {
-	int alturaCm;
-	int anchuraCm;
-	String color;
-	boolean esPortatil;
-	String marca;
+	private int alturaCm;
+	private int anchuraCm;
+	private String color;
+	private boolean esPortatil;
+	private String marca;
+	
+	public Ordenador () {
+		
+	}
 	
 
 	public Ordenador(int newAlturaCm, int newAnchuraCm, String newColor, boolean newEsPortatil, String newMarca) {
@@ -18,8 +22,49 @@ public class Ordenador {
 		
 	}
 
-	public void imprimePropiedades() {
-		System.out.println("Las propiedades del ordenador son alturaCm: " + alturaCm + ", anchuraCm: " + anchuraCm + 
-				", color: " + color + ", esPortatil: " + esPortatil + ", marca: "+ marca);
+	public String toString() {
+		return "Las propiedades del ordenador son alturaCm: " + alturaCm + ", anchuraCm: " + anchuraCm + 
+				", color: " + color + ", esPortatil: " + esPortatil + ", marca: "+ marca;
 	}
+	
+	public void setAlturaCm (int newAlturaCm) {
+		alturaCm = newAlturaCm;
+	}
+	public int getAlturaCm () {
+		return alturaCm;
+	}
+	
+	
+	public void setAnchuraCm (int newAnchuraCm) {
+		anchuraCm = newAnchuraCm;
+	}
+	public int getAnchuraCm () {
+		return anchuraCm;
+	}
+	
+	
+	public void setColor (String newColor) {
+		color = newColor;
+	}
+	public String getColor () {
+		return color;
+	}
+	
+	
+	public void setEsPortatil (boolean newEsPortatil) {
+		esPortatil = newEsPortatil;
+	}
+	public boolean getEsPortatil () {
+		return esPortatil;
+	}
+	
+	
+	public void setMarca (String newMarca) {
+		marca = newMarca;
+	}
+	public String getMarca () {
+		return marca;
+	}
+
+	
 }

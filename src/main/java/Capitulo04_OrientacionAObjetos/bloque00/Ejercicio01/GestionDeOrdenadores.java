@@ -5,11 +5,21 @@ import javax.swing.ImageIcon;
 public class GestionDeOrdenadores {
 
 	public static void main(String[] args) {
-		Ordenador prueba1 = new Ordenador(35, 4, "blanco", true, "HP");
-		prueba1.imprimePropiedades();
+		Ordenador prueba1 = new Ordenador();
+		prueba1.setAlturaCm(4);
+		prueba1.setAnchuraCm(35);
+		prueba1.setColor("blanco");
+		prueba1.setEsPortatil(true);
+		prueba1.setMarca("HP");
+		System.out.println(prueba1.toString());
 		
-		Ordenador prueba2 = new Ordenador(20, 40, "negro", false, "persoalizado");
-		prueba2.imprimePropiedades();
+		Ordenador prueba2 = new Ordenador();
+		prueba2.setAlturaCm(3);
+		prueba2.setAnchuraCm(30);
+		prueba2.setColor("negro");
+		prueba2.setEsPortatil(true);
+		prueba2.setMarca("Asus");
+		System.out.println(prueba2.toString());
 		
 	}
 
