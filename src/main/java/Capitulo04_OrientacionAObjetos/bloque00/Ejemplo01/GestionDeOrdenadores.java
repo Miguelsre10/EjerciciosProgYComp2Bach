@@ -1,4 +1,4 @@
-package Capitulo04_OrientacionAObjetos.bloque00.Ejercicio01;
+package Capitulo04_OrientacionAObjetos.bloque00.Ejemplo01;
 
 import javax.swing.ImageIcon;
 
