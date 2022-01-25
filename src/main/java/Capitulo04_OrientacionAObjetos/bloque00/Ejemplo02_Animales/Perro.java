@@ -1,9 +1,7 @@
 package Capitulo04_OrientacionAObjetos.bloque00.Ejemplo02_Animales;
 
-public class Perro {
+public class Perro extends Animal{
 	
-	private String colorPelo;
-	private int numeroPatas;
 	private int alturaOrejasCm;
 	
 	
@@ -13,25 +11,10 @@ public class Perro {
 	
 	
 	public Perro(String colorPelo, int numeroPatas, int alturaOrejasCm) {
-		super();
-		this.colorPelo = colorPelo;
-		this.numeroPatas = numeroPatas;
+		super(colorPelo, numeroPatas);
 		this.alturaOrejasCm = alturaOrejasCm;
 	}
 	
-	
-	public String getColorPelo() {
-		return colorPelo;
-	}
-	public void setColorPelo(String colorPelo) {
-		this.colorPelo = colorPelo;
-	}
-	public int getNumeroPatas() {
-		return numeroPatas;
-	}
-	public void setNumeroPatas(int numeroPatas) {
-		this.numeroPatas = numeroPatas;
-	}
 	public int getAlturaOrejasCm() {
 		return alturaOrejasCm;
 	}
@@ -45,6 +28,8 @@ public class Perro {
 		return "Perro [colorPelo=" + colorPelo + ", numeroPatas=" + numeroPatas + ", alturaOrejasCm=" + alturaOrejasCm
 				+ "]";
 	}
+	
+	
 	
 	
 	

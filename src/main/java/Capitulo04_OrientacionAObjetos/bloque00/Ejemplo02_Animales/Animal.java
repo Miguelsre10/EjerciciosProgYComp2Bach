@@ -2,8 +2,8 @@ package Capitulo04_OrientacionAObjetos.bloque00.Ejemplo02_Animales;
 
 public class Animal {
 	
-	private String colorPelo;
-	private int numeroPatas;
+	protected String colorPelo;
+	protected int numeroPatas;
 	
 	
 	public Animal() {
