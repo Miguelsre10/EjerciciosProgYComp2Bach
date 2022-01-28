@@ -19,6 +19,11 @@ public class Sal extends Mineral{
 	public void setDisolucion(float disolucion) {
 		this.disolucion = disolucion;
 	}
+
+	@Override
+	public String toString() {
+		return "Sal [dureza=" + dureza + ", color=" + color + ", disolucion=" + disolucion + "]";
+	}
 	
 	
 

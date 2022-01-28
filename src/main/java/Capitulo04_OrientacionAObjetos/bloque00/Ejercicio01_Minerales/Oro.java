@@ -19,6 +19,11 @@ public class Oro extends Mineral{
 	public void setBrillo(int brillo) {
 		this.brillo = brillo;
 	}
+
+	@Override
+	public String toString() {
+		return "Oro [dureza=" + dureza + ", color=" + color + ", brillo=" + brillo + "]";
+	}
 	
 	
 	

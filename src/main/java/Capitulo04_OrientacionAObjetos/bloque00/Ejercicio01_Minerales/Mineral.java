@@ -1,8 +1,8 @@
 package Capitulo04_OrientacionAObjetos.bloque00.Ejercicio01_Minerales;
 
 public class Mineral {
-	private float dureza;
-	private String color;
+	protected float dureza;
+	protected String color;
 	
 	public Mineral() {
 		super();

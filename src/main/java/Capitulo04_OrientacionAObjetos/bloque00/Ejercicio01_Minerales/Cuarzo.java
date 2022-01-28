@@ -19,6 +19,11 @@ public class Cuarzo extends Mineral{
 	public void setCristalizacion(int cristalizacion) {
 		this.cristalizacion = cristalizacion;
 	}
+
+	@Override
+	public String toString() {
+		return "Cuarzo [dureza=" + dureza + ", color=" + color + ", cristalizacion=" + cristalizacion + "]";
+	}
 	
 	
 	
