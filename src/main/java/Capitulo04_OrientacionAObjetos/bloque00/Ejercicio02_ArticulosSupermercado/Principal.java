@@ -13,12 +13,26 @@ class Principal {
 				case 1:
 					articuloComestible articuloComestible = new articuloComestible();
 					System.out.println("Introduzca el codigo del articulo:");
-					//articuloComestible.setCodigo(sc.nextInt());
-					System.out.println("Introduzca");
-					
+					articuloComestible.setCodigo(sc.nextInt());
+					System.out.println("Introduzca el nombre del articulo: ");
+					articuloComestible.setNombre(sc.next());
+					System.out.println("Introduzca el precio del articulo: ");
+					articuloComestible.setPrecio(sc.nextFloat());
+					System.out.println("Indtroduzca la fecha de caducidad del articulo: ");
+					articuloComestible.setCaducidad(sc.next());
+					System.out.println("Artículo comestible creado " + articuloComestible.toString());
 					break;
 				case 2:
-					
+					articuloLimpieza articuloLimpieza = new articuloLimpieza();
+					System.out.println("Introduzca el codigo del articulo:");
+					articuloLimpieza.setCodigo(sc.nextInt());
+					System.out.println("Introduzca el nombre del articulo: ");
+					articuloLimpieza.setNombre(sc.next());
+					System.out.println("Introduzca el precio del articulo: ");
+					articuloLimpieza.setPrecio(sc.nextFloat());
+					System.out.println("Indique si el articulo es ignifugo: ");
+					articuloLimpieza.setIgnifugo(sc.nextBoolean());
+					System.out.println("Artículo Limpieza creado " + articuloLimpieza.toString());
 					break;
 					
 			}

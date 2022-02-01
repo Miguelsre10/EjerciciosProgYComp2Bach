@@ -9,7 +9,7 @@ public class articuloComestible extends Articulo{
 	}
 	
 	
-	public articuloComestible(String nombre, String codigo, float precio, String caducidad) {
+	public articuloComestible(String nombre, int codigo, float precio, String caducidad) {
 		super(nombre, codigo, precio);
 		this.caducidad = caducidad;
 	}

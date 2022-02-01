@@ -7,7 +7,7 @@ public class articuloLimpieza extends Articulo{
 		super();
 	}
 	
-	public articuloLimpieza(String nombre, String codigo, float precio, boolean ignifugo) {
+	public articuloLimpieza(String nombre, int codigo, float precio, boolean ignifugo) {
 		super(nombre, codigo, precio);
 		this.ignifugo = ignifugo;
 	}
