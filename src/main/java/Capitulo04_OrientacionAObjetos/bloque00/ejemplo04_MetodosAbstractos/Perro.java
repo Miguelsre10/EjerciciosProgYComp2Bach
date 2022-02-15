@@ -8,6 +8,7 @@ public class Perro extends Animal{
 	
 	@Override
 	public void emiteSonido() {
+		System.out.println("guau");
 		
 	}
 
