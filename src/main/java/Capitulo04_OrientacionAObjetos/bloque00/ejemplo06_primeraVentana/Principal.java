@@ -13,20 +13,20 @@ import javax.swing.JTextField;
 public class Principal {
 
 	public static void main(String[] args) {
-		JFrame ventana = new JFrame();
+		JFrame ventana = new JFrame("8===D[]C===8");
 		ventana.setBounds(0, 0, 800, 600);
 		
-		ventana.getContentPane().setBackground(Color.decode("#5f2df7"));
-		
+		//ventana.getContentPane().setBackground(Color.decode("#5f2df7"));
 		ventana.getContentPane().setLayout(new BorderLayout());
 		
-		Canvas canvas =new Canvas();
-		//ventana.getContentPane().add(canvas, BorderLayout);
+		MiCanvas canvas = new MiCanvas();
+		canvas.setBackground(Color.PINK);
+		ventana.getContentPane().add(canvas, BorderLayout.CENTER);
 		
-		JTextField jtf = new JTextField();
-		jtf.setMinimumSize(new Dimension (100,100));
-		jtf.setPreferredSize(new Dimension (100,100));
-		ventana.getContentPane().add(jtf, BorderLayout.WEST);
+		//JTextField jtf = new JTextField();
+		//jtf.setMinimumSize(new Dimension (100,100));
+		//jtf.setPreferredSize(new Dimension (100,100));
+		//ventana.getContentPane().add(jtf, BorderLayout.WEST);
 		
 		JButton jbt = new JButton("Esto es un boton");
 		ventana.getContentPane().add(jbt, BorderLayout.NORTH);
