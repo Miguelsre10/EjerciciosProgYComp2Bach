@@ -1,4 +1,4 @@
-package Capitulo04_OrientacionAObjetos.bloque00.Ejercicio05_Muebles;
+package Capitulo04_OrientacionAObjetos.bloque00.Ejercicio03_Muebles;
 
 public class Silla extends Mueble {
 	protected int numPatas;

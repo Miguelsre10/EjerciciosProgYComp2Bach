@@ -1,4 +1,4 @@
-package Capitulo04_OrientacionAObjetos.bloque00.ejercicio07_Vnetana2;
+package Capitulo04_OrientacionAObjetos.bloque00.ejercicio06_Vnetana2;
 
 import java.awt.Canvas;
 import java.awt.Color;
