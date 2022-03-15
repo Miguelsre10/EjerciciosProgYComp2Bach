@@ -87,14 +87,14 @@ public class WindowBuilder_Completo {
 		
 		textField = new JTextField();
 		GridBagConstraints gbc_textField = new GridBagConstraints();
-		gbc_textField.insets = new Insets(10, 0, 5, 0);
+		gbc_textField.insets = new Insets(10, 0, 5, 5);
 		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField.gridx = 1;
 		gbc_textField.gridy = 1;
 		panel.add(textField, gbc_textField);
 		textField.setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("Tipo de cripto");
+		JLabel lblNewLabel_2 = new JLabel("Tipo de cripto:");
 		GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
 		gbc_lblNewLabel_2.anchor = GridBagConstraints.EAST;
 		gbc_lblNewLabel_2.insets = new Insets(0, 0, 5, 5);
@@ -104,13 +104,13 @@ public class WindowBuilder_Completo {
 		
 		JComboBox comboBox = new JComboBox();
 		GridBagConstraints gbc_comboBox = new GridBagConstraints();
-		gbc_comboBox.insets = new Insets(0, 0, 5, 0);
+		gbc_comboBox.insets = new Insets(0, 0, 5, 5);
 		gbc_comboBox.fill = GridBagConstraints.HORIZONTAL;
 		gbc_comboBox.gridx = 1;
 		gbc_comboBox.gridy = 2;
 		panel.add(comboBox, gbc_comboBox);
 		
-		JLabel lblNewLabel_3 = new JLabel("Clave privada");
+		JLabel lblNewLabel_3 = new JLabel("Clave privada:");
 		GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
 		gbc_lblNewLabel_3.anchor = GridBagConstraints.EAST;
 		gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 5);
@@ -120,13 +120,13 @@ public class WindowBuilder_Completo {
 		
 		passwordField = new JPasswordField();
 		GridBagConstraints gbc_passwordField = new GridBagConstraints();
-		gbc_passwordField.insets = new Insets(0, 0, 5, 0);
+		gbc_passwordField.insets = new Insets(0, 0, 5, 5);
 		gbc_passwordField.fill = GridBagConstraints.HORIZONTAL;
 		gbc_passwordField.gridx = 1;
 		gbc_passwordField.gridy = 3;
 		panel.add(passwordField, gbc_passwordField);
 		
-		JLabel lblNewLabel_4 = new JLabel("Soy experto");
+		JLabel lblNewLabel_4 = new JLabel("Soy experto:");
 		GridBagConstraints gbc_lblNewLabel_4 = new GridBagConstraints();
 		gbc_lblNewLabel_4.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel_4.gridx = 0;
@@ -141,7 +141,7 @@ public class WindowBuilder_Completo {
 		gbc_chckbxNewCheckBox.gridy = 4;
 		panel.add(chckbxNewCheckBox, gbc_chckbxNewCheckBox);
 		
-		JLabel lblNewLabel_5 = new JLabel("Observaciones");
+		JLabel lblNewLabel_5 = new JLabel("Observaciones:");
 		GridBagConstraints gbc_lblNewLabel_5 = new GridBagConstraints();
 		gbc_lblNewLabel_5.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel_5.gridx = 0;
@@ -150,7 +150,7 @@ public class WindowBuilder_Completo {
 		
 		JScrollPane scrollPane = new JScrollPane();
 		GridBagConstraints gbc_scrollPane = new GridBagConstraints();
-		gbc_scrollPane.insets = new Insets(0, 0, 5, 0);
+		gbc_scrollPane.insets = new Insets(0, 0, 5, 5);
 		gbc_scrollPane.fill = GridBagConstraints.BOTH;
 		gbc_scrollPane.gridx = 1;
 		gbc_scrollPane.gridy = 5;
