@@ -37,7 +37,9 @@ public class GestionCentros {
 	private JTextField jtfdirc;
 	private JTextField jtfpob;
 	private JTextField jtfprov;
-
+	private JButton btnNewButton = new JButton("<<");
+	private JButton btnNewButton_1 = new JButton("<");
+	
 	/**
 	 * Launch the application.
 	 */
@@ -198,7 +200,7 @@ public class GestionCentros {
 		frame.getContentPane().add(panel, gbc_panel);
 		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
-		JButton btnNewButton = new JButton("<<");
+		//JButton btnNewButton = new JButton("<<");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mostrarPrimerCentro();
@@ -206,7 +208,7 @@ public class GestionCentros {
 		});
 		panel.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("<");
+		//JButton btnNewButton_1 = new JButton("<");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				mostrarAnteriorCentro();
@@ -287,6 +289,13 @@ public class GestionCentros {
 				jtfprov.setText(rs.getString("provincia"));
 				
 			}
+			if (jtfid.getText().equals("1") ) {
+				deshabilitar();
+			}
+			else {
+				habilitar();
+			}
+			
 			rs.close();
 			s.close();
 			conexion.close();
@@ -320,6 +329,13 @@ public class GestionCentros {
 				jtfpob.setText(rs.getString("poblacion"));
 				jtfprov.setText(rs.getString("provincia"));
 			}
+			if (jtfid.getText().equals("1") ) {
+				deshabilitar();
+			}
+			else {
+				habilitar();
+			}
+			
 			rs.close();
 			s.close();
 			conexion.close();
@@ -353,6 +369,13 @@ public class GestionCentros {
 				jtfpob.setText(rs.getString("poblacion"));
 				jtfprov.setText(rs.getString("provincia"));
 			}
+			if (jtfid.getText().equals("1") ) {
+				deshabilitar();
+			}
+			else {
+				habilitar();
+			}
+			
 			rs.close();
 			s.close();
 			conexion.close();
@@ -386,11 +409,11 @@ public class GestionCentros {
 				jtfpob.setText(rs.getString("poblacion"));
 				jtfprov.setText(rs.getString("provincia"));
 			}
-			if (jtfid.getText() == "1") {
-				habilitar();
+			if (jtfid.getText().equals("1") ) {
+				deshabilitar();
 			}
 			else {
-				deshabilitar();
+				habilitar();
 			}
 			
 			rs.close();
