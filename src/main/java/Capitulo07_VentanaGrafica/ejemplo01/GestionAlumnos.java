@@ -234,7 +234,9 @@ public class GestionAlumnos {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/alumnos?serverTimezone=UTC","root", "Abcdefgh.1");
+			
 			Statement s = (Statement) conexion.createStatement(); 
+			
 			ResultSet rs = s.executeQuery ("select * from alumnos.alumno order by id limit 1");
 		   
 			if (rs.next() == true) { 

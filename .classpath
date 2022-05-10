@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="jgoodies-forms-1.8.0.jar" sourcepath="jgoodies-forms-1.8.0-sources.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/ProgramacionYComputacion2Bach-2021-22/librerias/AplicacionesWeb/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
