@@ -276,7 +276,7 @@ public class GestionCentros {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/alumnos?serverTimezone=UTC","root", "Abcdefgh.1");
+			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/centro_educativo?serverTimezone=UTC","root", "Abcdefgh.1");
 			Statement s = (Statement) conexion.createStatement(); 
 			ResultSet rs = s.executeQuery ("select * from centro_educativo.centro order by id limit 1");
 		   
@@ -317,7 +317,7 @@ public class GestionCentros {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/alumnos?serverTimezone=UTC","root", "Abcdefgh.1");
+			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/centro_educativo?serverTimezone=UTC","root", "Abcdefgh.1");
 			Statement s = (Statement) conexion.createStatement(); 
 			ResultSet rs = s.executeQuery ("select * from centro_educativo.centro order by id desc limit 1");
 		   
@@ -357,7 +357,7 @@ public class GestionCentros {
 		try {
 	
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/alumnos?serverTimezone=UTC","root", "Abcdefgh.1");
+			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/centro_educativo?serverTimezone=UTC","root", "Abcdefgh.1");
 			Statement s = (Statement) conexion.createStatement(); 
 			ResultSet rs = s.executeQuery ("select * from centro_educativo.centro where id > "+ jtfid.getText() + " order by id limit 1;");
 		   
@@ -397,7 +397,7 @@ public class GestionCentros {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/alumnos?serverTimezone=UTC","root", "Abcdefgh.1");
+			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/centro_educativo?serverTimezone=UTC","root", "Abcdefgh.1");
 			Statement s = (Statement) conexion.createStatement(); 
 			ResultSet rs = s.executeQuery ("select * from centro_educativo.centro where id < "+ jtfid.getText()  +" order by id desc limit 1;");
 		   
@@ -449,7 +449,7 @@ public class GestionCentros {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/alumnos?serverTimezone=UTC","root", "Abcdefgh.1");
+			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/centro_educativo?serverTimezone=UTC","root", "Abcdefgh.1");
 			Statement s = (Statement) conexion.createStatement(); 
 			int registrosModificados = s.executeUpdate (" delete from centro_educativo.centro where id = " + jtfid.getText());
 			
@@ -491,10 +491,10 @@ public class GestionCentros {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/alumnos?serverTimezone=UTC","root", "Abcdefgh.1");
+			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/centro_educativo?serverTimezone=UTC","root", "Abcdefgh.1");
 			Statement s = (Statement) conexion.createStatement(); 
 			int registrosModificados = s.executeUpdate (" update centro_educativo.centro set tipo = '" + jtftipo.getText() + "', denominacion = '" + jtfden.getText() +
-					"', direccion = '"+ jtfdirc.getText() + "', poblacion = '"+ jtfpob.getText() + "', provincia = '"+ jtfprov.getText() + "' where id = 1;");
+					"', direccion = '"+ jtfdirc.getText() + "', poblacion = '"+ jtfpob.getText() + "', provincia = '"+ jtfprov.getText() + "' where id = " + this.jtfid.getText()+" ;");
 			
 			if(registrosModificados == 1) {
 				JOptionPane.showMessageDialog(null, "Guardo Correctamente");
@@ -521,7 +521,7 @@ public class GestionCentros {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/alumnos?serverTimezone=UTC","root", "Abcdefgh.1");
+			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/centro_educativo?serverTimezone=UTC","root", "Abcdefgh.1");
 			Statement s = (Statement) conexion.createStatement();
 			
 			int id = siguienteIdDisponible();
@@ -556,7 +556,7 @@ public class GestionCentros {
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/alumnos?serverTimezone=UTC","root", "Abcdefgh.1");
+			Connection conexion = (Connection) DriverManager.getConnection ("jdbc:mysql://localhost/centro_educativo?serverTimezone=UTC","root", "Abcdefgh.1");
 			Statement s = (Statement) conexion.createStatement(); 
 			
 			ResultSet rs = s.executeQuery ("select max(id) from centro_educativo.centro");

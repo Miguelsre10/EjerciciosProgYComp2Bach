@@ -32,12 +32,22 @@ public class ListadoAlumnosServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		for (int i = 0; i < 10; i++) {
-			response.getWriter().append(i + " ");
-		}
 		
-		mostrarTodosAlumnos();
+		this.respuesta = "<!DOCTYPE html> "
+				+ "<html> "
+				+ "<head>"
+				+ "<meta charset=\"ISO-8859-1\"> "
+				+ "<title>Mi Primer Servlet</title> "
+				+ "</head> "
+				+ "<body> "
+				+ "<h1>Listado de alumnado</h1>"
+				+ "<table width='100%' border='1'>";
+
+		mostrarTodosAlumnos();		
+		
+		this.respuesta += "</table></body>"
+				+ "</html>";
+		
 		response.getWriter().append(this.respuesta);
 		
 	}
@@ -51,7 +61,11 @@ public class ListadoAlumnosServlet extends HttpServlet {
 			ResultSet rs = s.executeQuery ("select * from alumnos.alumno");
 		   
 			while (rs.next() == true) { 
-				this.respuesta += rs.getString("nombre" + "</br>");
+				this.respuesta += "<tr>" +
+						"<td><a href='FichaAlumnoServlet?id=" + rs.getInt("id") + "'>" + rs.getString("nombre") + "</a></td>" +
+						"<td>" + rs.getString("apellidos") + "</td>" +
+						"<td>" + rs.getString("nif") + "</td>" +
+						"</tr>";
 			}
 			rs.close();
 			s.close();
