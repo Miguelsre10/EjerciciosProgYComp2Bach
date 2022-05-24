@@ -44,7 +44,7 @@ public class FichaAlumnoServlet extends HttpServlet {
 
 		mostrarUnAlumno(Integer.parseInt(request.getParameter("id")) );
 		
-		this.respuesta = "</body> "
+		this.respuesta += "</body> "
 				+ "</html> ";
 		
 		response.getWriter().append(this.respuesta);
@@ -63,9 +63,9 @@ public class FichaAlumnoServlet extends HttpServlet {
 			ResultSet rs = s.executeQuery ("select * from alumnos.alumno where id = " + id );
 		   
 			if (rs.next() == true) { 
-				this.respuesta += "Nombre: " + rs.getString("nombre") + "<br/>" +
-						"Apellidos: " + rs.getString("apellidos") + "<br/>" + 
-						"NIF: " + rs.getString("nif");
+				this.respuesta += "nombre: " + rs.getString("nombre") + "<br/>" +
+						"apellidos: " + rs.getString("apellidos") + "<br/>" + 
+						"nif: " + rs.getString("nif");
 			}
 			rs.close();
 			s.close();
